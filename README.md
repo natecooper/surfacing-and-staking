@@ -2,6 +2,8 @@
 
 **A governance protocol for AI-assisted work. It keeps the judgment human.**
 
+![It's never been easier to build the wrong thing. When anyone can generate something that looks right in seconds, knowing what's worth building — and keeping human judgment in the loop — matters more than ever.](assets/build-the-wrong-thing.png)
+
 > NotebookLM tells you where the facts came from. This tells you who has to own the call.
 
 A user points their LLM at this protocol before a decision, an assignment, a recommendation, or a plan. The AI is then bound to **surface freely but never originate the judgment** — keeping a named human in the deciding seat, and making that discipline provable through a process receipt the user holds.
@@ -18,6 +20,10 @@ AI can produce plausible work before anyone has formed a position. That delegate
 - **Staking** — placing a bounded human judgment on the record. *"Here is what I believe we should do, why, and what would make that judgment wrong."* A named human does this, always.
 
 An AI can generate the *shape* of a recommendation but cannot own its consequences, so its output stays surfaced until a human judges and adopts it. That boundary is the whole product.
+
+![The surfacing-and-staking grid: a 2×2 of Human vs. AI against Surfaced vs. Staked. Human/Surfaced — "You explore": investigate, ask questions, test ideas. AI/Surfaced — "AI explores at scale": ranges across vast data, proposes, challenges, reveals. Human/Staked — "You own the call": take positions, make decisions, own the consequences. AI/Staked — "No one owns the call": no stakes, no accountability.](assets/surfacing-and-staking-grid.png)
+
+*The grid at the heart of the protocol — surfacing is safe for either party; staking has to stay human ([high-res](assets/surfacing-and-staking-grid-highres.png) · [PDF](assets/surfacing-and-staking-grid.pdf)).*
 
 ## How to use it
 
