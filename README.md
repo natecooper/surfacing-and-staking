@@ -8,6 +8,8 @@ A user points their LLM at this protocol before a decision, an assignment, a rec
 
 The shippable artifact is [`SKILL.md`](SKILL.md) — the protocol itself, in the form an AI loads.
 
+**New here?** For a plain-English introduction, read [*Surfacing and Staking: a framework to improve your opinion*](https://natecooper.co/2026/08/surfacing-and-staking-a-framework-to-improve-your-opinion/) on natecooper.co.
+
 ## What it does
 
 AI can produce plausible work before anyone has formed a position. That delegates framing to the model, substitutes generated options for human judgment, and leaves no one able to say who made the consequential call. This protocol separates two things that polished output blurs together:
