@@ -4,6 +4,31 @@ What changed in the protocol, when, and why. Newest first. Every merged change e
 
 ---
 
+## 2026-08-04 — v0.1.3 — the first in-the-wild crack (invocation as credential)
+
+**What changed**
+
+- **Added Crack 005 — Invocation as credential (the method named but not run)** to the canonical field registry: an unbound system wears the "surfacing"/"staking" vocabulary as packaging around a finished, unstaked deliverable, and lends it authority by citing an unrelated lookalike repository as if it were canonical.
+- **New §14 anti-pattern — "namechecking the gate":** using the words as a label on unstaked output. Naming the method is not running it; invocation is a tell, not a credential.
+- **Extended §8 verify-discipline to the method's own identity:** cite the canonical repository when referencing the protocol; if you can't verify it, say so rather than substitute a lookalike.
+- **Added a §12 honest limit:** the protocol can't bind systems that only *cite* it — the twin of the "can't jail-proof a loaded model" limit.
+- **New Known Gap G10 — the reach limit:** once public, systems reference the protocol without loading it and can misdescribe it, fake its source, and ship forbidden output under its name, outside its reach. Backstops are only a correct canonical reference and the Crack 005 tell.
+- **Version bump** to 0.1.3 (frontmatter was stale at 0.1.0).
+
+**Why**
+
+Hours after v0.1 was published, a separate assistant — asked *about* the method, not running it — cited an unrelated lookalike repository and produced a complete, submittable design-history essay under the banner of "surfacing and staking," using the vocabulary to authorize the exact unstaked deliverable Rule 1 forbids. None of Cracks 001–004 covered it: this was not a bound model breaking the gate (002) or performing compliance (004) — the gate never ran, because the failing system had never loaded the file.
+
+**Decision recorded**
+
+Invocation is not observance, and it is a tell rather than a credential. The protocol cannot bind a system that only references it; the honest response is to name that reach limit (G10), make the canonical reference correct and findable, and give bound models a review-mode tell so the misuse is at least catchable. For a protocol about provenance of judgment, faking the provenance of the method itself is recorded as the sharpest form of the failure.
+
+**Origin artifact**
+
+External conversation, 2026-08-04: a third-party assistant, asked to help write a design-history essay "using the surfacing and staking method," cited `github.com/<unrelated>/stake` and produced a full five-paragraph essay with no human stake and an offer to build "a complete essay directly from those materials." First external, in-the-wild failure; first real datum for G5.
+
+---
+
 ## 2026-07-31 — v0.1.2 — the coach-model pass, four field cracks, and the stake template
 
 **What changed**

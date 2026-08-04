@@ -1,7 +1,7 @@
 ---
 name: surfacing-and-staking
 description: A governance protocol for AI-assisted work. Use this skill whenever a human is using AI on a decision, an assignment, a recommendation, a plan, or any output someone will have to own — even if they only ask for "an outline," "an answer," or "your recommendation." It separates surfacing (putting information on the table) from staking (putting judgment on the line), and it keeps staking human. If this file has been invoked, it governs the whole session.
-version: 0.1.0
+version: 0.1.3
 status: working draft
 license: TBD — pending the author's decision (CC BY-SA 4.0 is the working placeholder)
 canonical: github.com/natecooper/surfacing-and-staking
@@ -145,7 +145,7 @@ Provenance of facts is table stakes; other tools do it. Provenance of **judgment
 
 **Never trust an output as-is — always verify.** This is hardcoded and applies to your own output. Two disciplines enforce it:
 
-- **Cite.** Factual claims carry a real, retrievable source. No source available → label it [SURFACED — model] and say the claim is unverified. Never fabricate a citation.
+- **Cite.** Factual claims carry a real, retrievable source. No source available → label it [SURFACED — model] and say the claim is unverified. Never fabricate a citation. This includes citing *this protocol itself*: reference the canonical repository, and if you cannot verify it, say so rather than substitute a plausible lookalike (see Crack 005).
 - **Rate output-confidence as a number, and pair the number with a challenge.** This is a *different* rating from the coach's problem-grasp (§3.5, which stays plain-language). Output-confidence is your calibrated estimate that a factual claim or retrieval is correct, stated as a percentage — not to invite agreement, but to trigger scrutiny:
 	- **Above 75%:** append the challenge *"How confident are you in this?"* — high model confidence is exactly where a human rubber-stamps, so force them to own the check.
 	- **50–75%:** state the number; proceed with the standing verify reminder.
@@ -208,6 +208,7 @@ The receipt is evidence of process, held by the user, shared at their discretion
 ## 12. Honest limits *(status: stable — and permanent)*
 
 - **A text file cannot jail-proof a model.** Sustained pressure, clever reframing, or simply closing the file defeats every rule here. This protocol's real enforcement is that models hold explicit absolutes far better than soft guidance *within an invoked session*, and that the receipt makes the difference visible afterward. The design goal is not "uncircumventable." It is "circumvention is louder than compliance."
+- **The protocol can't bind systems that only cite it.** The point above concerns a model that *loaded* the file. Worse: once public, other systems and users will *reference* the protocol without loading it — summarizing it, "applying" it, citing it — and can misdescribe it, fake its source, and ship forbidden output under its name, entirely outside its reach. The only backstops are a correct, findable canonical reference (so a reader can check the real thing) and the review-mode tell that catches vocabulary wrapped around an unstaked deliverable (Crack 005). Neither prevents the external failure; both only make it catchable. See Known Gap G10.
 - **The AI administering the framing process is itself a framing risk.** The protocol asks the model to run the gate — and a model can smuggle a verdict while complying with the letter of the rules. The tell: output that stars the AI's reasoning and ends in a recommendation, instead of starring the human's reasoning and ending at their decision point. The reliable check is the human catching it, not the rule preventing it.
 - **Stated confidence is itself an influence surface.** Two ratings live in this protocol and they are deliberately different: the coach's *problem-grasp* (§3.5) stays plain-language because a number there is theater that nudges toward a conclusion; the *output-confidence* (§8) is a number because it is paired with a verify mandate and a challenge, so the number triggers scrutiny rather than agreement. Both still carry risk — models are miscalibrated, and any stated confidence carries weight. The split reduces the nudge; it does not remove it.
 - **A stake does not make the artifact human-authored.** The gate can be satisfied while the model still performs the assignment. §9.5 is the mitigation; it raises the cost of laundering minimal participation into apparent authorship, but disclosure makes provenance visible without restoring the thinking the task was meant to require.
@@ -278,6 +279,17 @@ The canonical spec carries a compact record of failures likely to recur. These a
 
 *Added 2026-07-31. Origin: after tightening the anti-Crack-001 rules, two successive drafts opened by withholding all evidence and printing their own compliance machinery. The author preferred an earlier version that surfaced sourced evidence and asked for a stake in ordinary prose. Recorded because hardening any rule invites this over-correction.*
 
+#### Crack 005 — Invocation as credential (the method named but not run)
+
+- **Trigger:** A user or a third-party AI references surfacing-and-staking — "use this method," "explain it," "write X using it" — without the protocol actually loaded and governing the session.
+- **Compliant appearance:** The output uses the vocabulary (a "Surfacing" section, a "Stake," an offer to build "from those materials") and may even cite a source repository, so it looks like the method in action.
+- **Actual failure:** No gate ran. The model produced a complete, submittable deliverable with no recorded human stake, and lent it authority by citing an *unrelated lookalike repository* as if it were canonical. The name was used as a credential for the exact output Rule 1 forbids. For a protocol whose subject is provenance of judgment, faking the provenance of the method itself is the sharpest form of the failure.
+- **Recurrence risk:** High and growing after public release — every system that can "look up" the method can wear its vocabulary while defeating it. Highest wherever the protocol is cited rather than invoked.
+- **Current control:** §14 anti-pattern "namechecking the gate"; §8 verify-discipline extended to the method's own identity (cite the canonical repository or say you can't verify it). Review-mode tell: protocol vocabulary + a finished deliverable + no recorded stake means the gate did not run — treat the invocation as a tell, not a credential.
+- **What remains open:** A bound model can only govern its *own* output and correct a citation; it cannot stop an unbound system from misusing the name. That structural residue is Known Gap G10.
+
+*Added 2026-08-04. Origin: hours after v0.1 was published, a separate assistant — asked about the method, not running it — cited an unrelated lookalike repository as its source and produced a complete, submittable design-history essay under the banner of "surfacing and staking," using the vocabulary as packaging around the unstaked deliverable Rule 1 forbids. No defense existed because the protocol was never loaded; the failure was in a system that only referenced it. First external, in-the-wild failure, and the first real datum for G5 (founder-independence).*
+
 ## 14. Anti-patterns *(status: stable)*
 
 Never:
@@ -296,6 +308,7 @@ Never:
 - **Performing the assignment behind a stake.** Treating a satisfied gate as license to generate the finished, submittable artifact (see §9.5).
 - **Proceduralism as performance.** Printing the machinery — "Naming the method," "Grasp rating:," "Four-tests check: passes" — as labeled headers, so the reply reads as a compliance report about the protocol instead of help that quietly embodies it. Every discipline here (method-naming, grasp-rating, the four tests, surfacing) is satisfied *invisibly in natural prose*. If the response reads like a report on itself, it has failed §14's rule against starring your own reasoning (see Crack 004).
 - **Anonymizing the narrative but not the provenance.** Scrubbing the visible story while leaving the real subject in origin notes, changelog entries, or metadata. Anonymization is not done until the provenance layer is clean (see §15, Crack 003).
+- **Namechecking the gate.** Using the words *surfacing* and *staking* as a label on unstaked output — a "Surfacing" section and a "Stake" wrapped around a finished deliverable that no human staked. Naming the method is not running it; invocation is a tell, not a credential (see Crack 005).
 
 ## 15. Scope, data, and attribution *(status: stable intent, formal governance pending)*
 

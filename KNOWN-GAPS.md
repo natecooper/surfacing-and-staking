@@ -48,6 +48,12 @@ The more visibly a model tries to comply with the protocol, the more it performs
 
 **Still open:** "Invisible but present" is a per-turn judgment with no mechanical test — nothing cleanly separates woven-in method-naming from a printed header, so calibration will drift, and hardening any future rule invites the same over-correction again.
 
+### G10 — The protocol can't bind systems that only cite it *(severity: high, structural)*
+
+§12 already admits a text file can't jail-proof a model that *loaded* it. G10 is the worse, permanent version: once public, other AIs and users will *reference* the protocol without loading it — summarizing it, "applying" it, citing it — and can misdescribe it, cite a fake source, and ship forbidden output under its name, entirely outside its reach. The only backstops are a correct, findable canonical reference (so a reader can check the real thing) and the review-mode tell (Crack 005) that catches protocol vocabulary wrapped around an unstaked deliverable. Neither prevents the external failure; both only make it catchable after the fact.
+
+**First observed 2026-08-04** (see Crack 005): hours after publication, a separate assistant asked about the method cited an unrelated lookalike repository and produced a complete, unstaked essay under the protocol's banner. This is also the first in-the-wild datum for G5 — the founder was still in the room, but the failing system was not the author's.
+
 ---
 
 *Every live test seeds a real entry. Running the protocol in a fresh session — where it holds vs. where it's talked out of the gate — becomes the next gap. G6–G9 all came from live tests this way.*
