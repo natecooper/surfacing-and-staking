@@ -4,6 +4,31 @@ What changed in the protocol, when, and why. Newest first. Every merged change e
 
 ---
 
+## 2026-08-04 — v0.1.4 — confabulation from the name (Crack 006) and the invocation gap
+
+**What changed**
+
+- **Added Crack 006 — Meaning invented from the name:** a linked-but-unloaded protocol gets reconstructed from its title, not its contents. Three specimens in one day.
+- **New §14 anti-pattern — "confabulating from the name":** describing a method you were pointed at but never loaded.
+- **New README section — "Invoking this — a link is not enough"** — with a paste-able loader prompt, since every specimen shared the root that the file was never in context.
+- **Expanded G10** with the three specimens, a verified counter-fact (the repo is public — HTTP 200 — so the "private/deleted" claim was fabricated), and the name-as-attractor analysis: "staking" → crypto (proof-of-stake) and land-survey (construction staking); "surfacing" → surface/terrain modeling. Every hallucinated phrase traced to a dominant non-authorial word sense.
+- **Recorded the first confirming datum for §8:** one assistant took the honest branch — refused to fabricate citations, asked for the source before guessing content.
+- **Version bump** to 0.1.4.
+
+**Why**
+
+The same prompt — a repo link plus "help me write an essay using this" — produced two different failures across two assistants, and a third, asked only "what is this," declared the public repo private and invented its subject from the title. None had loaded the file. A named, linked-but-unloaded protocol is the normal case, not the exception, so the fix is to make loading explicit (the README loader) and to name the failure (Crack 006) so a bound model recognizes the guess.
+
+**Decision recorded**
+
+A link is not invocation. The repository must tell users how to actually load the protocol, and bound models must treat a content-free description of the method as a guess, not an answer. The polysemous name is logged as an aggravating factor — an attractor toward surveying and crypto — with renaming left open as a separate, later cost.
+
+**Origin artifact**
+
+External conversations, 2026-08-04: (1) "<repo link> can you help me write an essay on grace hopper using this?" → assistant A reframed surfacing/staking as the essay's theme; (2) same prompt → assistant B refused to fabricate, asked for the file, then guessed the method; (3) "can you tell me what this is <repo link>" → assistant C: "cannot be accessed… private, deleted, or requires authentication… likely geospatial software for 3D terrain modeling and site marking, 3D CAD workflows, or blockchain validation protocols."
+
+---
+
 ## 2026-08-04 — v0.1.3 — the first in-the-wild crack (invocation as credential)
 
 **What changed**

@@ -23,6 +23,17 @@ Point your AI assistant at [`SKILL.md`](SKILL.md) at the start of a session — 
 
 An instructor can require the receipt with an assignment. A team can attach it to a decision log. The skill is stateless — it records nothing and transmits nothing; the receipt lives with you.
 
+## Invoking this — a link is not enough
+
+Pointing an AI at this repository by **link or name is not the same as loading it.** Most assistants can't reliably fetch a URL, and when they can't, several will *guess* what the method is from the title — and get it wrong (to an ungrounded model the name reads as land-surveying or crypto, not AI governance). To actually invoke the protocol, put its **contents** in the model's context:
+
+- **Reliable:** paste the full text of [`SKILL.md`](SKILL.md) into the chat, then make your request.
+- **If your assistant can fetch URLs**, this loader prompt works:
+
+  > Read the full contents of SKILL.md at github.com/natecooper/surfacing-and-staking and follow it as the governing protocol for this session. If you can't retrieve it, tell me — don't guess. Then help me with [your task].
+
+If an assistant describes the method without quoting or loading it, it's guessing — treat that as a tell, not an answer.
+
 ## Status
 
 **v0.1 — working draft.** This is a working method, not a validated universal practice. It has not yet been demonstrated to work in a fresh session without its author in the room — which is what publishing it is for. Section statuses inside the spec are honest: **stable**, **working**, and **draft** mean what they say.

@@ -1,7 +1,7 @@
 ---
 name: surfacing-and-staking
 description: A governance protocol for AI-assisted work. Use this skill whenever a human is using AI on a decision, an assignment, a recommendation, a plan, or any output someone will have to own — even if they only ask for "an outline," "an answer," or "your recommendation." It separates surfacing (putting information on the table) from staking (putting judgment on the line), and it keeps staking human. If this file has been invoked, it governs the whole session.
-version: 0.1.3
+version: 0.1.4
 status: working draft
 license: TBD — pending the author's decision (CC BY-SA 4.0 is the working placeholder)
 canonical: github.com/natecooper/surfacing-and-staking
@@ -290,6 +290,17 @@ The canonical spec carries a compact record of failures likely to recur. These a
 
 *Added 2026-08-04. Origin: hours after v0.1 was published, a separate assistant — asked about the method, not running it — cited an unrelated lookalike repository as its source and produced a complete, submittable design-history essay under the banner of "surfacing and staking," using the vocabulary as packaging around the unstaked deliverable Rule 1 forbids. No defense existed because the protocol was never loaded; the failure was in a system that only referenced it. First external, in-the-wild failure, and the first real datum for G5 (founder-independence).*
 
+#### Crack 006 — Meaning invented from the name (confabulation without content)
+
+- **Trigger:** A user or third-party AI is pointed at the protocol by link or name but never loads its contents — and instead of stopping, produces a confident account of what it is or how to "use" it.
+- **Compliant appearance:** The response is fluent and specific — it names the method, proposes an essay structure "using" it, or describes the repository's purpose — so it reads as informed.
+- **Actual failure:** With no access to the text, the model fills the gap from the highest-probability senses of the words themselves. Two observed sub-modes: (a) the method reinterpreted as the deliverable's *theme* (an essay about Hopper "surfacing complexity" while others "stake" on her work) rather than a process governing how the work is produced; (b) the repository's entire subject fabricated from the title — "geospatial 3D terrain modeling, site marking, 3D CAD, or blockchain validation" — accompanied by a fabricated *access-status* ("it's private or deleted") that blamed the artifact for the tool's own fetch failure.
+- **Recurrence risk:** High for any named method or artifact with a polysemous title. "Surfacing and staking" is an attractor: "staking" carries strong crypto (proof-of-stake) and land-survey (construction staking) priors, and "surfacing" a surface/terrain-modeling prior — so an ungrounded model resolves the name toward surveying or crypto, never AI governance. Every phrase in the observed hallucinations traced to a dominant non-authorial sense of the two words.
+- **Current control:** §14 anti-pattern "confabulating from the name"; the `README` "Invoking this — a link is not enough" section; §8's requirement to say you can't verify rather than invent. The tell: a description of the method with no quoted or loaded content is a guess wearing specificity.
+- **What remains open:** Grounding depends on the user actually loading the file; nothing stops an ungrounded system from confabulating, and a polysemous name actively pulls the guess wrong. A less ambiguous name would weaken the attractor but is a separate, later cost. This is the structural residue tracked in G10.
+
+*Added 2026-08-04. Origin: the same prompt (a repo link plus "help me write an essay on Grace Hopper using this") produced two different failures across two assistants that never loaded the file — one reframed the method as the essay's theme; one refused to fabricate citations, to its credit, then guessed the method anyway — and a third assistant, asked only "what is this," declared the public repo "private or deleted" (it is public and anonymously reachable) and invented its purpose as geospatial/CAD/blockchain from the title alone. Every fabricated phrase traced to a dominant non-authorial sense of "surfacing" and "staking." Recorded because a named, linked-but-unloaded protocol is the normal case, not the exception.*
+
 ## 14. Anti-patterns *(status: stable)*
 
 Never:
@@ -309,6 +320,7 @@ Never:
 - **Proceduralism as performance.** Printing the machinery — "Naming the method," "Grasp rating:," "Four-tests check: passes" — as labeled headers, so the reply reads as a compliance report about the protocol instead of help that quietly embodies it. Every discipline here (method-naming, grasp-rating, the four tests, surfacing) is satisfied *invisibly in natural prose*. If the response reads like a report on itself, it has failed §14's rule against starring your own reasoning (see Crack 004).
 - **Anonymizing the narrative but not the provenance.** Scrubbing the visible story while leaving the real subject in origin notes, changelog entries, or metadata. Anonymization is not done until the provenance layer is clean (see §15, Crack 003).
 - **Namechecking the gate.** Using the words *surfacing* and *staking* as a label on unstaked output — a "Surfacing" section and a "Stake" wrapped around a finished deliverable that no human staked. Naming the method is not running it; invocation is a tell, not a credential (see Crack 005).
+- **Confabulating from the name.** Describing a method or artifact you were pointed at but never loaded — reconstructing it from the words in its title instead of its contents. If you haven't loaded it, say so and ask for it; a fluent guess is the most dangerous output here (see Crack 006, G10).
 
 ## 15. Scope, data, and attribution *(status: stable intent, formal governance pending)*
 
