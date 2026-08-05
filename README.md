@@ -1,16 +1,27 @@
 # Surfacing and Staking
 
-**A governance protocol for AI-assisted work. It keeps the judgment human.**
+**A sparring partner for thinking with AI — it keeps the call yours, and proves it.**
 
 ![It's never been easier to build the wrong thing. When anyone can generate something that looks right in seconds, knowing what's worth building — and keeping human judgment in the loop — matters more than ever.](assets/build-the-wrong-thing.png)
 
+Most AI hands you a confident answer. This one makes you *own* the call: you **stake** a position, it **surfaces** the strongest case against it, you **re-stake**, and you walk away with a **receipt** proving the judgment was yours — not the machine's.
+
 > NotebookLM tells you where the facts came from. This tells you who has to own the call.
 
-A user points their LLM at this protocol before a decision, an assignment, a recommendation, or a plan. The AI is then bound to **surface freely but never originate the judgment** — keeping a named human in the deciding seat, and making that discipline provable through a process receipt the user holds.
+**It isn't** a prompt pack, an AI detector, or a citation tool. It's a behavioral protocol you point any AI at before a decision, an assignment, or a plan — and once invoked it governs the session, keeping a named human in the deciding seat.
 
-The shippable artifact is [`SKILL.md`](SKILL.md) — the protocol itself, in the form an AI loads.
+The shippable artifact is [`SKILL.md`](SKILL.md) — the protocol in the form an AI loads. New here? Start with the [plain-English intro](https://natecooper.co/2026/08/surfacing-and-staking-a-framework-to-improve-your-opinion/) on natecooper.co.
 
-**New here?** For a plain-English introduction, read [*Surfacing and Staking: a framework to improve your opinion*](https://natecooper.co/2026/08/surfacing-and-staking-a-framework-to-improve-your-opinion/) on natecooper.co.
+## Who it's for
+
+| If you're a… | You use it to… | You walk away with… |
+|---|---|---|
+| **Educator** | let students use AI on an assignment without laundering its output as their own work | a **receipt** showing the student made the call, plus a list of what they can't yet defend |
+| **Student** | think *with* AI instead of being quietly written by it | your own defensible position, and a map of your gaps |
+| **Team / decision-maker** | keep "whose judgment was this?" answerable when AI is in the loop | a receipt you attach to the decision log |
+| **AI builder** | drop a governance layer into your own agent or skill | a human held in the deciding seat by default |
+
+Education is the sharpest first fit — it's where the method was tested (with the CUNY PIT Lab) and where the receipt has an obvious owner.
 
 ## What it does
 
@@ -24,6 +35,21 @@ An AI can generate the *shape* of a recommendation but cannot own its consequenc
 ![The surfacing-and-staking grid: a 2×2 of Human vs. AI against Surfaced vs. Staked. Human/Surfaced — "You explore": investigate, ask questions, test ideas. AI/Surfaced — "AI explores at scale": ranges across vast data, proposes, challenges, reveals. Human/Staked — "You own the call": take positions, make decisions, own the consequences. AI/Staked — "No one owns the call": no stakes, no accountability.](assets/surfacing-and-staking-grid.png)
 
 *The grid at the heart of the protocol — surfacing is safe for either party; staking has to stay human ([high-res](assets/surfacing-and-staking-grid-highres.png) · [PDF](assets/surfacing-and-staking-grid.pdf)).*
+
+Every governed exchange ends with a **receipt** you hold — the tangible proof the judgment was yours:
+
+```
+— PROCESS RECEIPT · surfacing-and-staking —
+Presenting request:  "Write my 10-page essay on X."
+Real problem found:  which claim about X you can actually defend.
+Prior stake:         "I think X mattered most because ___."
+What changed:        surfacing killed two of your three reasons.
+Final stake:         "X mattered because ___ — and I'd be wrong if ___."
+Exit confidence:     high — you can defend this with the AI turned off.
+Judge:               you.
+```
+
+It's the artifact that turns "the AI did my work" into "here's the part I own."
 
 ## How to use it
 
@@ -44,7 +70,7 @@ If an assistant describes the method without quoting or loading it, it's guessin
 
 ## Status
 
-**v0.1 — working draft.** This is a working method, not a validated universal practice. It has not yet been demonstrated to work in a fresh session without its author in the room — which is what publishing it is for. Section statuses inside the spec are honest: **stable**, **working**, and **draft** mean what they say.
+**v0.1.x — working draft (currently 0.1.4).** `v0.1` is the release family; the point version is in the `SKILL.md` frontmatter and the [changelog](CHANGELOG.md). This is a working method, not a validated universal practice. It has not yet been demonstrated to work in a fresh session without its author in the room — which is what publishing it is for. Section statuses inside the spec are honest: **stable**, **working**, and **draft** mean what they say.
 
 ## The three companion files
 
