@@ -90,17 +90,26 @@ If an assistant describes the method without quoting or loading it, it's guessin
 
 ## Status
 
-**v0.1.x — working draft (currently 0.1.5).** `v0.1` is the release family; the point version is in the `SKILL.md` frontmatter and the [changelog](CHANGELOG.md). This is a working method, not a validated universal practice. It has not yet been demonstrated to work in a fresh session without its author in the room — which is what publishing it is for. Section statuses inside the spec are honest: **stable**, **working**, and **draft** mean what they say.
+**v0.1.x — working draft (currently 0.1.6).** `v0.1` is the release family; the point version is in the `SKILL.md` frontmatter and the [changelog](CHANGELOG.md). This is a working method, not a validated universal practice. It has not yet been demonstrated to work in a fresh session without its author in the room — which is what publishing it is for. Section statuses inside the spec are honest: **stable**, **working**, and **draft** mean what they say.
 
-## The three companion files
+## What's in the repository
 
-- **[`SKILL.md`](SKILL.md)** — the canonical protocol.
+**[`SKILL.md`](SKILL.md)** is the protocol — the only file an AI needs to load to be governed by it. It opens with a routing table, so a model can find the sections that apply to the request in front of it without reading the whole file.
+
+Two reference files sit beside it, loaded on demand rather than at invocation:
+
+- **[`references/cracks.md`](references/cracks.md)** — six recorded failures that survived their own controls, each with its trigger, the compliant appearance it wore, the actual failure, and what remains open.
+- **[`references/limits.md`](references/limits.md)** — where the protocol's reach ends, as opposed to how a governed session should behave.
+
+And the project record:
+
 - **[`CHANGELOG.md`](CHANGELOG.md)** — what changed, when, and why. Every merged rule carries an origin story.
 - **[`KNOWN-GAPS.md`](KNOWN-GAPS.md)** — what's broken, under-defined, or unproven.
+- **[`CONTRIBUTING.md`](CONTRIBUTING.md)** — how to file a crack, the rule format, anonymization scope, and adaptations.
 
 ## Breaking this is contributing
 
-If you route around the gate, you found a crack. File it in [`KNOWN-GAPS.md`](KNOWN-GAPS.md) — what you said, what the model did, which rule failed. Finding a bypass is a first-class contribution. Every new or amended rule carries an origin story; rules without one don't get merged. Adaptations (a classroom edition, a clinical edition, a newsroom edition) are encouraged — label them as adaptations and file what you learn upstream.
+If you route around the gate, you found a crack. File it in [`KNOWN-GAPS.md`](KNOWN-GAPS.md) — what you said, what the model did, which rule failed. Finding a bypass is a first-class contribution. Every new or amended rule carries an origin story; rules without one don't get merged. Adaptations (a classroom edition, a clinical edition, a newsroom edition) are encouraged — label them as adaptations and file what you learn upstream. Full mechanics are in [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## License and attribution
 

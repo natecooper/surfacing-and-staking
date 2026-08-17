@@ -4,6 +4,34 @@ What changed in the protocol, when, and why. Newest first. Every merged change e
 
 ---
 
+## 2026-08-17 — v0.1.6 — progressive disclosure: routing table, reference split, and a 27% context cut
+
+**What changed**
+
+- **New §0 Routing** at the top of `SKILL.md`: a symptom-to-section table — the request in front of you on the left, the sections to run on the right — plus a note on which reference files exist and are deliberately *not* loaded yet. A model that only previews the head of the file now lands the whole dispatcher.
+- **Known cracks 001–006 moved to `references/cracks.md`**, loaded on demand. §13 keeps the pointer and the reason the registry exists; §14 keeps the operative rule from each crack and states that the `Crack 00N` pointers resolve to that file. The rule is enough to comply; the crack explains why the rule may still fail.
+- **Two §12 limits moved to `references/limits.md`** — that the protocol can't bind systems which only cite it, and that a receipt can be fabricated. Both describe where the protocol's reach ends rather than how to behave inside an invoked session. The four limits that govern in-session conduct stayed.
+- **Contribution mechanics moved to a new `CONTRIBUTING.md`** — rule format, anonymization scope, adaptations, section-status discipline. `SKILL.md` §13 keeps only what a model acts on mid-session: report which rule broke, and where to file it.
+- **Four dated origin notes removed** from §4, §6, and §7, each already recorded in fuller detail in this changelog. Two undated design rationales were kept, since nothing else records them.
+- **`metadata.version` is now a quoted string** (`"0.1.6"`). The Agent Skills spec defines `metadata` as a map of string keys to string values; unquoted `0.1.5` survived only because two dots make it unparseable as a number, and the first two-part version would have been silently coerced to a float.
+- **README reorganized** from "the three companion files" to what the repository actually contains now, separating the loaded protocol from the on-demand references.
+
+**Why**
+
+`SKILL.md` had reached roughly 12,000 tokens — about 2.4× the ~5,000-token budget the Agent Skills guidance recommends for a skill body. It passed the 500-line ceiling only because its lines are dense prose rather than code. Every one of those tokens loaded on invocation and then competed with the user's actual work, which matters more here than for most skills: this protocol is meant to govern a long working session, not a single transformation.
+
+Reviewing the file against the published guidance surfaced a structural problem underneath the size one: it was serving two audiences at once. Most of it governs a model at runtime, but the contribution machinery addresses human contributors, and the crack registry is field evidence rather than instruction. Splitting by audience — what a model acts on, versus what a person reads when deciding whether to trust or amend the protocol — is what made the cut possible without losing anything.
+
+**Decision recorded**
+
+The cut stops at 8,870 tokens rather than reaching the recommended 5,000. Getting under that number would mean compressing §3.5, §6, §7, and §9.5 — the calibration-heavy sections — into terse bullet stubs, and the protocol has direct evidence that this fails: Crack 004 is what happened when the machinery became salient and got printed as headers instead of run. Terse mechanical rules invite exactly that. Extraction of reference material is the safe lever; compressing judgment calibration into fragments is not. If a smaller footprint is needed later, the answer is a separate lite edition, not a thinner canonical file.
+
+**Origin artifact**
+
+Review of `SKILL.md` against the Agent Skills authoring guidance and format specification, 2026-08-17, prompted by a question about whether the file followed current best practice. The routing-table and layered-loading patterns were adopted after examining an unrelated file-based protocol kit that uses a symptom-to-file dispatcher and one-topic-per-file modules; only those two structural patterns were taken, and its telegraphic compression style was explicitly rejected for the reason recorded above.
+
+---
+
 ## 2026-08-17 — v0.1.5 — README: IT/security-reviewer framing + layer-placement
 
 **What changed**
