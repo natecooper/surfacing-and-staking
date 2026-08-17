@@ -4,6 +4,31 @@ What changed in the protocol, when, and why. Newest first. Every merged change e
 
 ---
 
+## 2026-08-17 — v0.1.5 — README: IT/security-reviewer framing + layer-placement
+
+**What changed**
+
+- **New README section — "For IT / security review"** at the top of the file, above the conceptual body: nothing to install, stateless, no attack surface of its own, fully readable and forkable. It front-loads facts that already existed rather than adding new ones.
+- **New README section — "Where this sits"** naming a three-layer stack — IT/platform governance above, AI awareness and literacy below, authorship and decision governance in the middle — and placing this protocol in the middle layer explicitly as non-competing with existing controls.
+- **§15 reconciled, not duplicated.** The stateless bullet is now the single canonical statement (extended to cover "no external calls, collects no data" so it is never narrower than the README's summary), and the README cross-references it instead of restating it. The passing mention of statelessness in the README's "How to use it" section was cut for the same reason.
+- **Version bump** to 0.1.5.
+
+**Why**
+
+The repository travels on its own, and its realistic path is to be forwarded — from someone sympathetic to a team who reads anything entering their environment adversarially. That reader asks four questions first: what does this touch, collect, or transmit; is it a policy, a control, or a philosophy; where does it sit relative to controls we already run; and does adopting it cost us anything to secure. The answer to the first already lived in §15, but an IT reviewer does not read to §15. The failure was placement, not content: if the top of the README doesn't defuse the attack-surface question, the body never gets read.
+
+The second addition answers a different reflex — filing an "AI governance" artifact as a redundant or competing policy that overlaps an existing acceptable-use policy or approved-tool list. Naming the layer makes the protocol legible as an authorship standard rather than an engineering control, which is also the standing answer to the recurring misread of this method as human-in-the-loop: HITL lives in the top layer, and this does not.
+
+**Decision recorded**
+
+Facts that decide whether the repository gets read at all belong at the top, and they belong in one place. The protocol is placed as the middle layer of a three-layer stack — it assumes tool-and-data governance exists and governs the human decision at the point of use, which no tool-and-data control can specify. It stays non-prescriptive: it describes a layer, it does not mandate organizational policy. The layer framing also carries a practical consequence worth stating — because the unit of governance is one person at the point of use, an organization can apply consistent authorship standards without waiting on a finalized global policy.
+
+**Origin artifact**
+
+Internal handoff spec, 2026-08-17: an analysis of how the repository is actually received when read cold by a reviewer assessing it as an artifact entering their environment, rather than warmly by a reader already interested in the method. Two README sections were specified; the prior-art section ("isn't this just HITL, red teaming, or dialectic?") and Crack 007 were deliberately held back as separate edits.
+
+---
+
 ## 2026-08-04 — v0.1.4 — confabulation from the name (Crack 006) and the invocation gap
 
 **What changed**
