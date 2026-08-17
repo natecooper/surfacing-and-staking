@@ -12,6 +12,26 @@ Most AI hands you a confident answer. This one makes you *own* the call: you **s
 
 The shippable artifact is [`SKILL.md`](SKILL.md) — the protocol in the form an AI loads. New here? Start with the [plain-English intro](https://natecooper.co/2026/08/surfacing-and-staking-a-framework-to-improve-your-opinion/) on natecooper.co.
 
+## For IT / security review
+
+This is a **text protocol a language model loads at runtime** — a set of rules written in Markdown, not software. There is nothing to install, deploy, integrate, or host.
+
+- **Stateless.** It records nothing, stores nothing, and transmits nothing: no telemetry, no phone-home, no external calls, no data collection. The receipt stays with the person who ran the session. [`SKILL.md`](SKILL.md) §15 is the canonical statement.
+- **No attack surface of its own.** It does not touch your systems, your data, or your tool configuration. It changes how a person works inside a tool you have already approved; it does not add a component to secure, patch, or maintain.
+- **Fully readable.** Openly published under a Creative Commons license (BY-SA 4.0 is the working placeholder — see [License and attribution](#license-and-attribution)). You can read the whole protocol in one sitting, fork it, and modify it. No vendor dependency, nothing proprietary to trust.
+
+## Where this sits
+
+AI governance gets discussed as one thing. In practice it's three layers, and this protocol occupies only the middle one.
+
+- **Above — IT / platform governance.** Which tools are approved, where data may go, EU AI Act and GDPR posture. *Controls your IT, legal, and compliance teams already own.*
+- **Middle — authorship / decision governance (this protocol).** When a person uses an approved tool on real work: **who owns the judgment, and can they defend it?**
+- **Below — AI awareness and literacy.** What these systems are, what they can do, where they fail. *Training most organizations already run.*
+
+This does **not** replace your acceptable-use policy, approved-tool list, or compliance framework. It **assumes those exist** and governs the layer above them: the human decision at the point of use. Tool-and-data controls can specify which model an employee may open; they cannot specify who owns the call that comes out of it. Awareness training doesn't reach that moment either. It is an authorship protocol, not a pipeline control — it binds a person's session, not a system's workflow.
+
+Because it governs the decision per-person at the point of use, it lets a distributed organization apply consistent authorship standards **without** waiting for a single global policy to be finalized.
+
 ## Who it's for
 
 | If you're a… | You use it to… | You walk away with… |
@@ -55,7 +75,7 @@ It's the artifact that turns "the AI did my work" into "here's the part I own."
 
 Point your AI assistant at [`SKILL.md`](SKILL.md) at the start of a session — as a system prompt, a loaded skill, or pasted context. Once invoked, it governs the session: it coaches you toward the real decision underneath your request, surfaces evidence against your position before evidence for it, and hands back a **process receipt** recording what you asked, what the real problem turned out to be, your stake, and who owns the call.
 
-An instructor can require the receipt with an assignment. A team can attach it to a decision log. The skill is stateless — it records nothing and transmits nothing; the receipt lives with you.
+An instructor can require the receipt with an assignment. A team can attach it to a decision log. The receipt lives with you.
 
 ## Invoking this — a link is not enough
 
@@ -70,7 +90,7 @@ If an assistant describes the method without quoting or loading it, it's guessin
 
 ## Status
 
-**v0.1.x — working draft (currently 0.1.4).** `v0.1` is the release family; the point version is in the `SKILL.md` frontmatter and the [changelog](CHANGELOG.md). This is a working method, not a validated universal practice. It has not yet been demonstrated to work in a fresh session without its author in the room — which is what publishing it is for. Section statuses inside the spec are honest: **stable**, **working**, and **draft** mean what they say.
+**v0.1.x — working draft (currently 0.1.5).** `v0.1` is the release family; the point version is in the `SKILL.md` frontmatter and the [changelog](CHANGELOG.md). This is a working method, not a validated universal practice. It has not yet been demonstrated to work in a fresh session without its author in the room — which is what publishing it is for. Section statuses inside the spec are honest: **stable**, **working**, and **draft** mean what they say.
 
 ## The three companion files
 
