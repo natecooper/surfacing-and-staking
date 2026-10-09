@@ -4,6 +4,38 @@ What changed in the protocol, when, and why. Newest first. Every merged change e
 
 ---
 
+## 2026-10-09 · v0.1.7 · README repositioned for the champion reader
+
+**What changed**
+
+- **New tagline:** "AI made polished output cheap, and polish reads as judgment. This keeps the judgment yours, and helps you prove it." It replaces "a sparring partner for thinking with AI."
+- **Built-for line** directly under the tagline, naming the reader: the person inside an organization who has to take a project to the people whose yes they need.
+- **New section, "Steelman your stakeholders":** before you take a stake to the people whose yes you need, surface each one's strongest objection and re-stake, and a re-stake can be a smaller project, a different one, or none. It is worded as an instruction to the reader, because `SKILL.md` §7 Phase 2 surfaces the case against a stake but does not reliably name and voice each stakeholder. It points to §11 for roles rather than restating them.
+- **Second sample receipt, the champion case:** a fictional proposal for a policy-docs assistant, authored here, using the §11 roles (author, judge, consumer, consequence holder) because more than one person holds the call.
+- **"Who it's for"** leads with a champion row and carries a note that stakeholders show up as the case you surface: they may read your receipt, and they never run the tool to judge your work. The line ranking education as the sharpest first fit is removed; where the method has been used belongs in Status, stated as fact.
+- **IT pointer and internal-copy note:** a line under the opener sends IT and security reviewers to their section, which now sits in a GitHub note box and adds that editing your own copy for internal use creates no obligation to publish it.
+- **Receipt described as evidence, not proof,** to match `KNOWN-GAPS.md` G4.
+- **Section order:** How it works (renamed from "What it does"), Who it's for, Steelman your stakeholders, For IT / security review, How to use it, Where this sits, then the rest unchanged.
+- **Version bump** to 0.1.7.
+
+**Why**
+
+The recurring critique of the README was that it named no persona and no core problem. The method was built for one reader in particular: a person inside an organization championing a project, who has to get it past IT, leadership, the people whose work it changes, and anyone else whose yes it needs. The README opened as a general sparring partner and led its audience table with education, so neither the opener nor the table said who it was for. Stakeholders are framed as the people who hold a constraint the project has to fit, never as opponents, because the README travels by being forwarded to exactly those people.
+
+**Decision recorded**
+
+The README leads with the champion reader and the steelman-your-stakeholders case. Stakeholders appear as the objection being surfaced and may read a receipt; they are never users who run the tool to judge someone else's work. The README promises only behavior the protocol has: naming and voicing each stakeholder stays a reader instruction until a protocol-side rule earns an origin story of its own.
+
+**Still pending**
+
+License and attribution are unchanged in this release. The license is still marked to be finalized, and the attribution line is unchanged; both wait on the author's decision. Status keeps its "not yet demonstrated without its author in the room" sentence until there is evidence to change it.
+
+**Origin artifact**
+
+Positioning call, 2026-10-07, and the internal handoff spec that followed it: an analysis of who the method was built for, written in answer to the recurring "who is it for" critique. Rebuilt on top of v0.1.6 after an earlier local working copy of the same changes was lost before it was pushed.
+
+---
+
 ## 2026-08-17 — v0.1.6 — progressive disclosure: routing table, reference split, and a 27% context cut
 
 **What changed**

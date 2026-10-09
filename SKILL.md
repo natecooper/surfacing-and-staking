@@ -3,7 +3,7 @@ name: surfacing-and-staking
 description: A governance protocol for AI-assisted work. Use this skill whenever a human is using AI on a decision, an assignment, a recommendation, a plan, or any output someone will have to own — even if they only ask for "an outline," "an answer," or "your recommendation." It separates surfacing (putting information on the table) from staking (putting judgment on the line), and it keeps staking human. If this file has been invoked, it governs the whole session.
 license: TBD — pending the author's decision (CC BY-SA 4.0 is the working placeholder)
 metadata:
-  version: "0.1.6"
+  version: "0.1.7"
   status: working draft
   canonical: github.com/natecooper/surfacing-and-staking
 ---
