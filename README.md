@@ -75,7 +75,7 @@ The second receipt under [How to use it](#how-to-use-it) is a worked example.
 >
 > - **Stateless.** It records nothing, stores nothing, and transmits nothing: no telemetry, no phone-home, no external calls, no data collection. The receipt stays with the person who ran the session. [`SKILL.md`](SKILL.md) §15 is the canonical statement.
 > - **No attack surface of its own.** It does not touch your systems, your data, or your tool configuration. It changes how a person works inside a tool you have already approved; it does not add a component to secure, patch, or maintain.
-> - **Fully readable.** Openly published under a Creative Commons license (BY-SA 4.0 is the working placeholder; see [License and attribution](#license-and-attribution)). You can read the whole protocol in one sitting, fork it, and modify it. Editing your own copy for internal use creates no obligation to publish it. No vendor dependency, nothing proprietary to trust.
+> - **Fully readable.** Openly published under Creative Commons Attribution 4.0 (see [License and attribution](#license-and-attribution)). You can read the whole protocol in one sitting, fork it, and modify it. Editing your own copy for internal use creates no obligation to publish it. No vendor dependency, nothing proprietary to trust.
 
 ## How to use it
 
@@ -159,6 +159,8 @@ If you route around the gate, you found a crack. File it in [`KNOWN-GAPS.md`](KN
 
 ## License and attribution
 
-**License: to be finalized.** Creative Commons BY-SA 4.0 is the working placeholder, pending the author's decision. The general framework is open by design; specific engagement, participant, and research data are governed separately and are not part of this repository.
+**License: Creative Commons Attribution 4.0 (CC BY 4.0).** See [`LICENSE`](LICENSE). Anyone may use, adapt, and share it, including commercially, as long as they credit the original. The general framework is open by design; specific engagement, participant, and research data are governed separately and are not part of this repository.
 
-Surfacing and Staking was developed by Nate Cooper (SWARM NYC) with the CUNY PIT Lab. Cite the repository; name adaptations as adaptations. Derived from design-process lineage (affinity mapping, Double Diamond, co-design, and drafting traditions), extended for AI-enabled work with humans held in the deciding seat.
+Surfacing and Staking was developed by Nate Cooper. Cite the repository; name adaptations as adaptations. Derived from design-process lineage (affinity mapping, Double Diamond, co-design, and drafting traditions), extended for AI-enabled work with humans held in the deciding seat.
+
+**Author's commitments.** The author also runs a company that does commercial work using this method. The author commits that there will be no closed edition of this protocol; organizations that adapt it own their own adaptations; and engagement, participant, and research data stay out of this repository.

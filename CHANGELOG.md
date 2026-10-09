@@ -16,6 +16,10 @@ What changed in the protocol, when, and why. Newest first. Every merged change e
 - **IT pointer and internal-copy note:** a line under the opener sends IT and security reviewers to their section, which now sits in a GitHub note box and adds that editing your own copy for internal use creates no obligation to publish it.
 - **Receipt described as evidence, not proof,** to match `KNOWN-GAPS.md` G4.
 - **Section order:** How it works (renamed from "What it does"), Who it's for, Steelman your stakeholders, For IT / security review, How to use it, Where this sits, then the rest unchanged.
+- **License decided: CC BY 4.0.** A `LICENSE` file with the full legal code is added at the repository root. The placeholder wording is replaced in the README license section and IT/security bullet, the `SKILL.md` frontmatter `license:` field, and `SKILL.md` §15. Anyone may use, adapt, and share the protocol, including commercially, as long as they credit the original.
+- **Attribution** in the README and `SKILL.md` §15 now reads "developed by Nate Cooper." The lineage sentence is unchanged.
+- **Author's commitments** added to the README license section: no closed edition of the protocol, organizations that adapt it own their adaptations, and engagement, participant, and research data stay out of the repository.
+- **`SKILL.md` §15 tidy-up:** the section status is now "stable" (it was "stable intent, formal governance pending"), and the license bullet says "the general framework is open by design" without "and curriculum".
 - **Version bump** to 0.1.7.
 
 **Why**
@@ -28,7 +32,7 @@ The README leads with the champion reader and the steelman-your-stakeholders cas
 
 **Still pending**
 
-License and attribution are unchanged in this release. The license is still marked to be finalized, and the attribution line is unchanged; both wait on the author's decision. Status keeps its "not yet demonstrated without its author in the room" sentence until there is evidence to change it.
+Status keeps its "not yet demonstrated without its author in the room" sentence until there is evidence to change it.
 
 **Origin artifact**
 
