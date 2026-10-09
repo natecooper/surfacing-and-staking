@@ -1,9 +1,9 @@
 ---
 name: surfacing-and-staking
 description: A governance protocol for AI-assisted work. Use this skill whenever a human is using AI on a decision, an assignment, a recommendation, a plan, or any output someone will have to own — even if they only ask for "an outline," "an answer," or "your recommendation." It separates surfacing (putting information on the table) from staking (putting judgment on the line), and it keeps staking human. If this file has been invoked, it governs the whole session.
-license: TBD — pending the author's decision (CC BY-SA 4.0 is the working placeholder)
+license: CC-BY-4.0 (see LICENSE)
 metadata:
-  version: "0.1.6"
+  version: "0.1.7"
   status: working draft
   canonical: github.com/natecooper/surfacing-and-staking
 ---
@@ -261,12 +261,12 @@ Never:
 - **Namechecking the gate.** Using the words *surfacing* and *staking* as a label on unstaked output — a "Surfacing" section and a "Stake" wrapped around a finished deliverable that no human staked. Naming the method is not running it; invocation is a tell, not a credential (see Crack 005).
 - **Confabulating from the name.** Describing a method or artifact you were pointed at but never loaded — reconstructing it from the words in its title instead of its contents. If you haven't loaded it, say so and ask for it; a fluent guess is the most dangerous output here (see Crack 006, G10).
 
-## 15. Scope, data, and attribution *(status: stable intent, formal governance pending)*
+## 15. Scope, data, and attribution *(status: stable)*
 
 - **This skill is stateless.** It records nothing, stores nothing, transmits nothing, phones nothing home; it makes no external calls and collects no data of its own. The receipt lives with the user. Outcome tracking, effectiveness data, and instrumentation are explicitly out of scope for this file. This is the canonical statement of the fact — the README's "For IT / security review" section points here rather than restating it, and must never claim more than this bullet does.
 - **Anonymization covers the whole artifact.** When a case or incident is anonymized, the scrub applies to every layer — narrative, examples, origin notes, changelog entries, attribution, and metadata — not just the visible story. The provenance layer is the most-missed surface and must be checked explicitly, because this file's own contribution format pairs a narrative with an origin note every time. On anything bound for release, verify the provenance layer is clean before publishing.
-- **License:** to be finalized — Creative Commons BY-SA 4.0 is the working placeholder, pending the author's call. The general framework and curriculum are open by design; specific engagement data, participant data, and research findings are governed separately and are not part of this repository.
-- **Attribution:** Surfacing and Staking was developed by Nate Cooper (SWARM NYC) with the CUNY PIT Lab. Cite the repository; name adaptations as adaptations. Derived from design-process lineage (affinity mapping, Double Diamond, co-design, drafting traditions) — extended for AI-enabled work with humans held in the deciding seat.
+- **License:** Creative Commons Attribution 4.0 (CC BY 4.0); see `LICENSE`. The general framework is open by design; specific engagement data, participant data, and research findings are governed separately and are not part of this repository.
+- **Attribution:** Surfacing and Staking was developed by Nate Cooper. Cite the repository; name adaptations as adaptations. Derived from design-process lineage (affinity mapping, Double Diamond, co-design, drafting traditions), extended for AI-enabled work with humans held in the deciding seat.
 
 ---
 
