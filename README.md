@@ -1,10 +1,14 @@
 # Surfacing and Staking
 
-**A sparring partner for thinking with AI — it keeps the call yours, and proves it.**
+**AI made polished output cheap, and polish reads as judgment. This keeps the judgment yours, and helps you prove it.**
+
+Built for the person inside an organization who has to take a project to the people whose yes they need: IT, leadership, the people whose work it changes, and anyone else it has to get past.
 
 ![It's never been easier to build the wrong thing. When anyone can generate something that looks right in seconds, knowing what's worth building — and keeping human judgment in the loop — matters more than ever.](assets/build-the-wrong-thing.png)
 
-Most AI hands you a confident answer. This one makes you *own* the call: you **stake** a position, it **surfaces** the strongest case against it, you **re-stake**, and you walk away with a **receipt** proving the judgment was yours — not the machine's.
+Polish makes people overconfident, so nobody invests in the judgment to decide whether something is actually worth doing. Most AI hands you a confident answer. This one makes you *own* the call: you **stake** a position, it **surfaces** the strongest case against it, you **re-stake**, and you walk away with a **receipt** showing the judgment was yours, not the machine's.
+
+Reviewing this for IT or security? Go to [For IT / security review](#for-it--security-review).
 
 > NotebookLM tells you where the facts came from. This tells you who has to own the call.
 
@@ -12,38 +16,7 @@ Most AI hands you a confident answer. This one makes you *own* the call: you **s
 
 The shippable artifact is [`SKILL.md`](SKILL.md) — the protocol in the form an AI loads. New here? Start with the [plain-English intro](https://natecooper.co/2026/08/surfacing-and-staking-a-framework-to-improve-your-opinion/) on natecooper.co.
 
-## For IT / security review
-
-This is a **text protocol a language model loads at runtime** — a set of rules written in Markdown, not software. There is nothing to install, deploy, integrate, or host.
-
-- **Stateless.** It records nothing, stores nothing, and transmits nothing: no telemetry, no phone-home, no external calls, no data collection. The receipt stays with the person who ran the session. [`SKILL.md`](SKILL.md) §15 is the canonical statement.
-- **No attack surface of its own.** It does not touch your systems, your data, or your tool configuration. It changes how a person works inside a tool you have already approved; it does not add a component to secure, patch, or maintain.
-- **Fully readable.** Openly published under a Creative Commons license (BY-SA 4.0 is the working placeholder — see [License and attribution](#license-and-attribution)). You can read the whole protocol in one sitting, fork it, and modify it. No vendor dependency, nothing proprietary to trust.
-
-## Where this sits
-
-AI governance gets discussed as one thing. In practice it's three layers, and this protocol occupies only the middle one.
-
-- **Above — IT / platform governance.** Which tools are approved, where data may go, EU AI Act and GDPR posture. *Controls your IT, legal, and compliance teams already own.*
-- **Middle — authorship / decision governance (this protocol).** When a person uses an approved tool on real work: **who owns the judgment, and can they defend it?**
-- **Below — AI awareness and literacy.** What these systems are, what they can do, where they fail. *Training most organizations already run.*
-
-This does **not** replace your acceptable-use policy, approved-tool list, or compliance framework. It **assumes those exist** and governs the layer above them: the human decision at the point of use. Tool-and-data controls can specify which model an employee may open; they cannot specify who owns the call that comes out of it. Awareness training doesn't reach that moment either. It is an authorship protocol, not a pipeline control — it binds a person's session, not a system's workflow.
-
-Because it governs the decision per-person at the point of use, it lets a distributed organization apply consistent authorship standards **without** waiting for a single global policy to be finalized.
-
-## Who it's for
-
-| If you're a… | You use it to… | You walk away with… |
-|---|---|---|
-| **Educator** | let students use AI on an assignment without laundering its output as their own work | a **receipt** showing the student made the call, plus a list of what they can't yet defend |
-| **Student** | think *with* AI instead of being quietly written by it | your own defensible position, and a map of your gaps |
-| **Team / decision-maker** | keep "whose judgment was this?" answerable when AI is in the loop | a receipt you attach to the decision log |
-| **AI builder** | drop a governance layer into your own agent or skill | a human held in the deciding seat by default |
-
-Education is the sharpest first fit — it's where the method was tested (with the CUNY PIT Lab) and where the receipt has an obvious owner.
-
-## What it does
+## How it works: surfacing and staking
 
 AI can produce plausible work before anyone has formed a position. That delegates framing to the model, substitutes generated options for human judgment, and leaves no one able to say who made the consequential call. This protocol separates two things that polished output blurs together:
 
@@ -56,7 +29,7 @@ An AI can generate the *shape* of a recommendation but cannot own its consequenc
 
 *The grid at the heart of the protocol — surfacing is safe for either party; staking has to stay human ([high-res](assets/surfacing-and-staking-grid-highres.png) · [PDF](assets/surfacing-and-staking-grid.pdf)).*
 
-Every governed exchange ends with a **receipt** you hold — the tangible proof the judgment was yours:
+Every governed exchange ends with a **receipt** you hold: a record that the judgment was yours:
 
 ```
 — PROCESS RECEIPT · surfacing-and-staking —
@@ -71,11 +44,84 @@ Judge:               you.
 
 It's the artifact that turns "the AI did my work" into "here's the part I own."
 
+## Who it's for
+
+Stakeholders (a manager, IT, an instructor, the people whose work it changes) show up as the case you surface. They may read your receipt; they never run the tool to judge your work.
+
+| If you're a… | You use it to… | You walk away with… |
+|---|---|---|
+| **Someone championing a project inside an organization** | steelman your stakeholders before you ask for their yes | a stake that holds up in front of the people whose yes you need, and a receipt you can show them |
+| **Educator** | let students use AI on an assignment without laundering its output as their own work | a **receipt** showing the student made the call, plus a list of what they can't yet defend |
+| **Student** | think *with* AI instead of being quietly written by it | your own defensible position, and a map of your gaps |
+| **Team / decision-maker** | keep "whose judgment was this?" answerable when AI is in the loop | a receipt you attach to the decision log |
+| **AI builder** | drop a governance layer into your own agent or skill | a human held in the deciding seat by default |
+
+## Steelman your stakeholders
+
+Before you take a stake to the people whose yes you need, surface their strongest case against it and re-stake. Write the claim yourself. Ask for the strongest objection each stakeholder would raise. Rewrite the claim yourself, even if that means dropping it. Both ends stay human.
+
+Stakeholders are whoever holds a constraint your project has to fit: IT (data, governance, approved tools), leadership (what it costs, what it returns), the people whose work it changes (whether it replaces them, whether it is being done to them), an instructor, a funder.
+
+The protocol surfaces the strongest case against your stake and asks who is missing ([`SKILL.md`](SKILL.md) §7, Phase 2), but naming each stakeholder and asking for their objection is your move; it will not reliably do that on its own. What comes back is surfaced material, not what those people actually think; check it with them. When more than one person holds the call, [`SKILL.md`](SKILL.md) §11 names the roles.
+
+A re-stake can be a smaller project, a different one, or none. Surfacing that kills the stake is the method working. You find out before you build it.
+
+The second receipt under [How to use it](#how-to-use-it) is a worked example.
+
+## For IT / security review
+
+> [!NOTE]
+> This is a **text protocol a language model loads at runtime** — a set of rules written in Markdown, not software. There is nothing to install, deploy, integrate, or host.
+>
+> - **Stateless.** It records nothing, stores nothing, and transmits nothing: no telemetry, no phone-home, no external calls, no data collection. The receipt stays with the person who ran the session. [`SKILL.md`](SKILL.md) §15 is the canonical statement.
+> - **No attack surface of its own.** It does not touch your systems, your data, or your tool configuration. It changes how a person works inside a tool you have already approved; it does not add a component to secure, patch, or maintain.
+> - **Fully readable.** Openly published under a Creative Commons license (BY-SA 4.0 is the working placeholder; see [License and attribution](#license-and-attribution)). You can read the whole protocol in one sitting, fork it, and modify it. Editing your own copy for internal use creates no obligation to publish it. No vendor dependency, nothing proprietary to trust.
+
 ## How to use it
 
 Point your AI assistant at [`SKILL.md`](SKILL.md) at the start of a session — as a system prompt, a loaded skill, or pasted context. Once invoked, it governs the session: it coaches you toward the real decision underneath your request, surfaces evidence against your position before evidence for it, and hands back a **process receipt** recording what you asked, what the real problem turned out to be, your stake, and who owns the call.
 
 An instructor can require the receipt with an assignment. A team can attach it to a decision log. The receipt lives with you.
+
+A fictional receipt for the champion case:
+
+```
+— PROCESS RECEIPT · surfacing-and-staking —
+Presenting request:  "Write a proposal for an AI assistant that answers new-hire
+                     questions from our policy docs."
+Real problem found:  whether the questions new hires actually ask are answerable
+                     from the docs at all.
+Prior stake:         "An assistant on the policy docs cuts questions to the
+                     people team by half."
+What changed:        IT allows only the approved tenant, no outside tools. The
+                     twenty most common new-hire questions are not in the docs.
+                     The people-team lead who would maintain it had not been asked.
+Final stake:         "Fix the twenty missing answers first. Pilot the assistant on
+                     the approved tenant with the people-team lead as owner.
+                     Measure questions to the people team over eight weeks. I'd be
+                     wrong if the questions keep coming because they're about
+                     managers, not policy."
+Exit confidence:     medium. Defensible to IT and the people team. Not yet tested
+                     against finance's question of why this beats a better FAQ page.
+Author:              you.
+Judge:               whoever approves the pilot.
+Consumer:            the people-team lead.
+Consequence holder:  the people team.
+```
+
+A valid final stake for this case was also "don't build the assistant; fix the docs."
+
+## Where this sits
+
+AI governance gets discussed as one thing. In practice it's three layers, and this protocol occupies only the middle one.
+
+- **Above — IT / platform governance.** Which tools are approved, where data may go, EU AI Act and GDPR posture. *Controls your IT, legal, and compliance teams already own.*
+- **Middle — authorship / decision governance (this protocol).** When a person uses an approved tool on real work: **who owns the judgment, and can they defend it?**
+- **Below — AI awareness and literacy.** What these systems are, what they can do, where they fail. *Training most organizations already run.*
+
+This does **not** replace your acceptable-use policy, approved-tool list, or compliance framework. It **assumes those exist** and governs the layer above them: the human decision at the point of use. Tool-and-data controls can specify which model an employee may open; they cannot specify who owns the call that comes out of it. Awareness training doesn't reach that moment either. It is an authorship protocol, not a pipeline control — it binds a person's session, not a system's workflow.
+
+Because it governs the decision per-person at the point of use, it lets a distributed organization apply consistent authorship standards **without** waiting for a single global policy to be finalized.
 
 ## Invoking this — a link is not enough
 
